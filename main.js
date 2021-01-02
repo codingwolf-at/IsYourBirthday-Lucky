@@ -4,6 +4,8 @@ const dobInput = document.querySelector('#date');
 const numberInput = document.querySelector('#number');
 // ref to check button
 const checkButton = document.querySelector('#button');
+// ref  to output div
+const outputDiv = document.querySelector('#output')
 
 // declaring function amILucky
 function amILucky() {
@@ -11,7 +13,7 @@ function amILucky() {
     const sumOfDOB = addDOB(dateOfBirth);
     const luckyNumber = numberInput.value;
     const luck = checkLuck(sumOfDOB, luckyNumber);
-    console.log(luck);
+    outputDiv.innerHTML = setHTML(luck)
 }
 
 // adding event listener to check button
@@ -47,4 +49,14 @@ function getSum(number) {
         sum += temp;
     }
     return sum;
+}
+
+// function to set HTML
+function setHTML(luck) {
+    if(luck) {
+        return `<h3>Hurray! The sum of digits of your date of birth is divisible by your lucky number 😎</h3>
+        <h2>🎉Your Birthday is Lucky!🎉</h2>`;
+    } else {
+        return `<h3>Sorry, your birthday missed to be lucky 😓</h3>`
+    }
 }

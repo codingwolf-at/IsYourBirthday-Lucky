@@ -10,7 +10,6 @@ function amILucky() {
     const dateOfBirth = (dobInput.value).split("-");
     const sumOfDOB = addDOB(dateOfBirth);
     const luckyNumber = numberInput.value;
-    console.log(sumOfDOB);
     const luck = checkLuck(sumOfDOB, luckyNumber);
     console.log(luck);
 }

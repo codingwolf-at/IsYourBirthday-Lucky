@@ -73,7 +73,7 @@ footer a {
     background-color: #1F2937;
     color: white;
     margin: 2rem auto;
-    width: 400px;
+    max-width: 400px;
 }
 
 /* The close button */
